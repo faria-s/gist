@@ -1,0 +1,8 @@
+- Setup inicial da base de dados (só se faz na primeira vez):
+docker-compose -f docker-compose.dev.yml -f linux.yml up db
+
+- Gera as tabelas na base de dados:
+mix ecto.setup
+
+- Para rodar a base de dados através do Docker:
+docker-compose -f docker-compose.dev.yml -f linux.yml start
