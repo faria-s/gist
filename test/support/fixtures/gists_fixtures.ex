@@ -1,22 +1,23 @@
-defmodule Gist.GistsFixtures do
+defmodule SalGist.GistsFixtures do
   @moduledoc """
   This module defines test helpers for creating
-  entities via the `Gist.Gists` context.
+  entities via the `SalGist.Gists` context.
   """
 
   @doc """
-  Generate a Gists.
+  Generate a gist.
   """
-  def Gists_fixture(attrs \\ %{}) do
-    {:ok, Gists} =
+  def gist_fixture(attrs \\ %{}) do
+    {:ok, gist} =
       attrs
       |> Enum.into(%{
         description: "some description",
         markup_text: "some markup_text",
-        name: "some name"
+        name: "some name",
+        user_id: "some user_id"
       })
-      |> Gist.Gists.create_Gists()
+      |> SalGist.Gists.create_gist()
 
-    Gists
+    gist
   end
 end

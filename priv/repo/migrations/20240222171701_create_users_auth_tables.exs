@@ -1,4 +1,4 @@
-defmodule Gist.Repo.Migrations.CreateUsersAuthTables do
+defmodule SalGist.Repo.Migrations.CreateUsersAuthTables do
   use Ecto.Migration
 
   def change do
