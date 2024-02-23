@@ -7,19 +7,19 @@
 # General application configuration
 import Config
 
-config :gist,
-  ecto_repos: [Gist.Repo],
+config :sal_gist,
+  ecto_repos: [SalGist.Repo],
   generators: [binary_id: true]
 
 # Configures the endpoint
-config :gist, GistWeb.Endpoint,
+config :sal_gist, SalGistWeb.Endpoint,
   url: [host: "localhost"],
   render_errors: [
-    formats: [html: GistWeb.ErrorHTML, json: GistWeb.ErrorJSON],
+    formats: [html: SalGistWeb.ErrorHTML, json: SalGistWeb.ErrorJSON],
     layout: false
   ],
-  pubsub_server: Gist.PubSub,
-  live_view: [signing_salt: "BAQJize0"]
+  pubsub_server: SalGist.PubSub,
+  live_view: [signing_salt: "I7ORNg8N"]
 
 # Configures the mailer
 #
@@ -28,7 +28,7 @@ config :gist, GistWeb.Endpoint,
 #
 # For production it's recommended to configure a different adapter
 # at the `config/runtime.exs`.
-config :gist, Gist.Mailer, adapter: Swoosh.Adapters.Local
+config :sal_gist, SalGist.Mailer, adapter: Swoosh.Adapters.Local
 
 # Configure esbuild (the version is required)
 config :esbuild,

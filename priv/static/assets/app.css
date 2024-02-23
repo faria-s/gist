@@ -1399,14 +1399,14 @@ select {
   color: rgb(88 104 117 / var(--tw-text-opacity));
 }
 
+.text-\[\#e3e5d7\] {
+  --tw-text-opacity: 1;
+  color: rgb(227 229 215 / var(--tw-text-opacity));
+}
+
 .text-\[\#f6eddc\] {
   --tw-text-opacity: 1;
   color: rgb(246 237 220 / var(--tw-text-opacity));
-}
-
-.text-brand {
-  --tw-text-opacity: 1;
-  color: rgb(253 79 0 / var(--tw-text-opacity));
 }
 
 .text-emerald-800 {

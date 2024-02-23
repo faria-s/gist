@@ -1,7 +1,7 @@
-defmodule Gist.AccountsFixtures do
+defmodule SalGist.AccountsFixtures do
   @moduledoc """
   This module defines test helpers for creating
-  entities via the `Gist.Accounts` context.
+  entities via the `SalGist.Accounts` context.
   """
 
   def unique_user_email, do: "user#{System.unique_integer()}@example.com"
@@ -18,7 +18,7 @@ defmodule Gist.AccountsFixtures do
     {:ok, user} =
       attrs
       |> valid_user_attributes()
-      |> Gist.Accounts.register_user()
+      |> SalGist.Accounts.register_user()
 
     user
   end

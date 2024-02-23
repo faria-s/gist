@@ -1,4 +1,4 @@
-defmodule Gist.DataCase do
+defmodule SalGist.DataCase do
   @moduledoc """
   This module defines the setup for tests requiring
   access to the application's data layer.
@@ -10,7 +10,7 @@ defmodule Gist.DataCase do
   we enable the SQL sandbox, so changes done to the database
   are reverted at the end of every test. If you are using
   PostgreSQL, you can even run database tests asynchronously
-  by setting `use Gist.DataCase, async: true`, although
+  by setting `use SalGist.DataCase, async: true`, although
   this option is not recommended for other databases.
   """
 
@@ -18,17 +18,17 @@ defmodule Gist.DataCase do
 
   using do
     quote do
-      alias Gist.Repo
+      alias SalGist.Repo
 
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
-      import Gist.DataCase
+      import SalGist.DataCase
     end
   end
 
   setup tags do
-    Gist.DataCase.setup_sandbox(tags)
+    SalGist.DataCase.setup_sandbox(tags)
     :ok
   end
 
@@ -36,7 +36,7 @@ defmodule Gist.DataCase do
   Sets up the sandbox based on the test tags.
   """
   def setup_sandbox(tags) do
-    pid = Ecto.Adapters.SQL.Sandbox.start_owner!(Gist.Repo, shared: not tags[:async])
+    pid = Ecto.Adapters.SQL.Sandbox.start_owner!(SalGist.Repo, shared: not tags[:async])
     on_exit(fn -> Ecto.Adapters.SQL.Sandbox.stop_owner(pid) end)
   end
 
