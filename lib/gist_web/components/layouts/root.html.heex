@@ -11,7 +11,8 @@
     <script defer phx-track-static type="text/javascript" src={~p"/assets/app.js"}>
     </script>
   </head>
-  <body class="bg-gray-600 antialiased">
+  <body style="background-image: url('/images/sal.avif'); height: 400px"
+  class="bg-cover bg-center  bg-no-repeat bg-fixed">
     <ul class="relative z-10 flex items-center gap-4 px-4 sm:px-6 lg:px-8 justify-end">
       <%= if @current_user do %>
         <li class="text-[0.8125rem] leading-6 text-zinc-900">
@@ -38,7 +39,7 @@
         <li>
           <.link
             href={~p"/users/register"}
-            class="text-[0.8125rem] leading-6 text-zinc-900 font-semibold hover:text-zinc-700"
+            class="text-[1rem] leading-6 text-zinc-900 font-semibold hover:text-zinc-700"
           >
             Register
           </.link>
@@ -46,7 +47,7 @@
         <li>
           <.link
             href={~p"/users/log_in"}
-            class="text-[0.8125rem] leading-6 text-zinc-900 font-semibold hover:text-zinc-700"
+            class="text-[1rem] leading-6 text-zinc-900 font-semibold hover:text-zinc-700"
           >
             Log in
           </.link>
