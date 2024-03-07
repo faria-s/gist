@@ -1,11 +1,24 @@
-<header class="px-4 sm:px-6 lg:px-8">
-  <div class=" flex items-center justify-between border-b border-zinc-100 py-3 text-sm">
-
+<header class = "flex justify-between items-center px-6 py-6 bg-[#aedbd5] ">
+  <div class ="flex items-center">
+    <a href={~p"/"}>
+      <img src="/images/1f9c2.png" alt="Logo" class="h-12 w-auto">
+    </a>
+    <a href={~p"/"}>
+      <div class ="text-white font-brand font-bold text-5xl mr-5">Gist</div>
+    </a>
+    <div>
+      <input
+      type = "text"
+      class= "rounded-lg focus:outline-none focus:border-emLavender focus:ring-0 px-3 pt-2 bg-white placeholder-[#c2e4e0] text-[#c2e4e0] font-brand font-regular text-sm mr-4 border-white "  
+      placeholders = "Search..."
+      />
+      <button class="mt-1  text-white text-[2rem] font-brand font-bold hover:text-[#ebf6f5]"> All Gists
+      </button>
+    </div>
+  </div>
+  <div class ="relative">
+    <button class= "img-down-arrow" id= "user-menu-button">
+    <img src = "/images/user-regular(3).svg" alt="Profile Image" class="round-image-padding w-10 h-10">    
+    </button>
   </div>
 </header>
-<main class="px-4 py-20 sm:px-6 lg:px-8">
-  <div class="mx-auto max-w-2xl">
-    <.flash_group flash={@flash} />
-    <%= @inner_content %>
-  </div>
-</main>
