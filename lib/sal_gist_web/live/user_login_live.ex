@@ -3,7 +3,7 @@ defmodule SalGistWeb.UserLoginLive do
 
   def render(assigns) do
     ~H"""
-    <div class="absolute inset-y-80 left-90 mx-auto max-w-sm">
+    <div class="my-20 mx-auto max-w-sm">
       <.header class="text-center">
         Sign in to account
         <:subtitle>
