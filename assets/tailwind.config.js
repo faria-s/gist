@@ -14,7 +14,24 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        emNav : {
+            DEFAULT: "#aedbd5",
+            medium:"#79cfc4",
+        },
+        emDark: {
+          dark: "#010101",
+          DEFAULT: "#3C3B3B",
+          light: "#828282"
+        },
+        
       }
+    },
+    fontFamily: {
+      brand: ["WorkSans", "sans-serif"],
+    },
+    fontWeight: {
+      regular: "normal",
+      bold: "bold"
     },
   },
   plugins: [
