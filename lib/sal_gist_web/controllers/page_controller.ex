@@ -1,9 +1,7 @@
 defmodule SalGistWeb.PageController do
   use SalGistWeb, :controller
 
-  def home(conn, _params) do
-    # The home page is often custom made,
-    # so skip the default app layout.
-    render(conn, :home)
+  def home(conn,_params) do
+    redirect(conn, to: "/create")
   end
 end

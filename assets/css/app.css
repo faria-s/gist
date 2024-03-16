@@ -24,6 +24,12 @@
   @apply hover:text-emDark-light
 }
 
+.em-gradient{
+  background-image: linear-gradient(to bottom,#aedbd5,#c2e4e0,#d6edea,#ebf6f5);
+  height: 500px;
+  
+}
+
 .round-image-padding{
     border-radius: 50%;
     border: 1.5px solid white;
