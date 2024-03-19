@@ -24,6 +24,31 @@
   @apply hover:text-emDark-light
 }
 
+form input[type="text"] {
+  @apply bg-[#ebf6f5] font-brand font-regular text-white text-xs border border-white
+}
+
+form input[type="text"]:focus {
+  @apply focus:outline-none focus:border-emNav-medium focus:ring-0
+}
+
+.textarea{
+  @apply bg-emDark-very font-brand font-regular text-white text-xs border border-emDark-light h-[300px] resize-none;
+  border-top: none;
+}
+
+.textarea:focus {
+  @apply focus:outline-none focus:border-emNav focus:ring-0
+}
+
+.create-button {
+  @apply bg-emNav border border-emDark-light font-brand font-regular text-emDark-dark text-base
+}
+
+.create-button:hover {
+  @apply hover:bg-emNav-light text-emDark-light border-emDark-light
+}
+
 .em-gradient{
   background-image: linear-gradient(to bottom,#aedbd5,#c2e4e0,#d6edea,#ebf6f5);
   height: 225px;

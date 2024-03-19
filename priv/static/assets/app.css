@@ -906,6 +906,14 @@ select{
   margin-bottom: 1.5rem;
 }
 
+.mb-10{
+  margin-bottom: 2.5rem;
+}
+
+.mb-2{
+  margin-bottom: 0.5rem;
+}
+
 .mb-4{
   margin-bottom: 1rem;
 }
@@ -1071,6 +1079,10 @@ select{
   width: 20rem;
 }
 
+.w-\[300px\]{
+  width: 300px;
+}
+
 .w-\[40rem\]{
   width: 40rem;
 }
@@ -1140,6 +1152,10 @@ select{
   align-items: center;
 }
 
+.justify-end{
+  justify-content: flex-end;
+}
+
 .justify-center{
   justify-content: center;
 }
@@ -1178,6 +1194,12 @@ select{
   --tw-space-y-reverse: 0;
   margin-top: calc(3rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(3rem * var(--tw-space-y-reverse));
+}
+
+.space-y-4 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
 .space-y-8 > :not([hidden]) ~ :not([hidden]){
@@ -1229,6 +1251,16 @@ select{
   border-radius: 0.375rem;
 }
 
+.rounded-b-md{
+  border-bottom-right-radius: 0.375rem;
+  border-bottom-left-radius: 0.375rem;
+}
+
+.rounded-t-md{
+  border-top-left-radius: 0.375rem;
+  border-top-right-radius: 0.375rem;
+}
+
 .border{
   border-width: 1px;
 }
@@ -1278,6 +1310,11 @@ select{
 .bg-\[\#ebf6f5\]{
   --tw-bg-opacity: 1;
   background-color: rgb(235 246 245 / var(--tw-bg-opacity));
+}
+
+.bg-emDark-light{
+  --tw-bg-opacity: 1;
+  background-color: rgb(206 212 218 / var(--tw-bg-opacity));
 }
 
 .bg-emNav{
@@ -1350,6 +1387,11 @@ select{
 .px-2{
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+}
+
+.px-28{
+  padding-left: 7rem;
+  padding-right: 7rem;
 }
 
 .px-3{
@@ -1696,7 +1738,84 @@ select{
 
 .menu-item:hover:hover{
   --tw-text-opacity: 1;
-  color: rgb(130 130 130 / var(--tw-text-opacity));
+  color: rgb(206 212 218 / var(--tw-text-opacity));
+}
+
+form input[type="text"]{
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(235 246 245 / var(--tw-bg-opacity));
+  font-family: WorkSans, sans-serif;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: normal;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+form input[type="text"]:focus:focus{
+  --tw-border-opacity: 1;
+  border-color: rgb(121 207 196 / var(--tw-border-opacity));
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.textarea{
+  height: 300px;
+  resize: none;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(206 212 218 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(235 246 245 / var(--tw-bg-opacity));
+  font-family: WorkSans, sans-serif;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: normal;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  border-top: none;
+}
+
+.textarea:focus:focus{
+  --tw-border-opacity: 1;
+  border-color: rgb(174 219 213 / var(--tw-border-opacity));
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.create-button{
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(206 212 218 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(174 219 213 / var(--tw-bg-opacity));
+  font-family: WorkSans, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+  --tw-text-opacity: 1;
+  color: rgb(108 117 125 / var(--tw-text-opacity));
+}
+
+.create-button:hover{
+  --tw-border-opacity: 1;
+  border-color: rgb(206 212 218 / var(--tw-border-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(206 212 218 / var(--tw-text-opacity));
+}
+
+.create-button:hover:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(222 247 236 / var(--tw-bg-opacity));
 }
 
 .em-gradient{

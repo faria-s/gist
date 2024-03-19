@@ -15,13 +15,16 @@ module.exports = {
     extend: {
       colors: {
         emNav : {
+            light: "#def7ec",
             DEFAULT: "#aedbd5",
             medium:"#79cfc4",
         },
         emDark: {
-          dark: "#010101",
-          DEFAULT: "#3C3B3B",
-          light: "#828282"
+          dark: "#6c757d",
+          DEFAULT: "#adb5bd",
+          light: "#ced4da",
+          very:"#ebf6f5",
+
         },
         
       }
