@@ -33,7 +33,7 @@ form input[type="text"]:focus {
 }
 
 .textarea{
-  @apply bg-emDark-very font-brand font-regular text-white text-xs border border-emDark-light h-[300px] resize-none;
+  @apply bg-emDark-very font-brand font-regular text-emDark-dark text-xs border border-emDark-light h-[300px] resize-none;
   border-top: none;
 }
 
