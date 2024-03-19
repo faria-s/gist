@@ -1752,7 +1752,7 @@ form input[type="text"]{
   line-height: 1rem;
   font-weight: normal;
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: rgb(108 117 125 / var(--tw-text-opacity));
 }
 
 form input[type="text"]:focus:focus{

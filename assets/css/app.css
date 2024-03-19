@@ -25,7 +25,7 @@
 }
 
 form input[type="text"] {
-  @apply bg-[#ebf6f5] font-brand font-regular text-white text-xs border border-white
+  @apply bg-[#ebf6f5] font-brand font-regular text-emDark-dark text-xs border border-white
 }
 
 form input[type="text"]:focus {
