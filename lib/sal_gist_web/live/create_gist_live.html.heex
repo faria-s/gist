@@ -3,9 +3,9 @@
     Instantly share some code,notes and snippets.
   </p>
 </div>
-<.form for={@form}>
+<.form for={@form} phx-submit="create" phx-change="validate">
   <div class="justify center px-28 w-full space-y-4 mb-10">
-    <.input field={@form[:description]} placeholder="Gist description.." autocomplete="off"/>
+    <.input field={@form[:description]} placeholder="Gist description.." autocomplete="off" phx-debounce="blur"/>
     <div>
       <div class="flex p-2 items-center bg-emDark-light rounded-t-md border">
         <div class="w-[300px] mb-2 ">
@@ -13,6 +13,7 @@
             field={@form[:name]} 
             placeholder="Filename including extension..." 
             autocomplete="off"
+            phx-debounce ="blur"
           />
         </div>
       </div>
@@ -20,11 +21,12 @@
           class: "textarea w-full rounded-b-md", 
           placeholder: "Insert code...", 
           spellcheck: "false", 
-          autocomplete: "off"
+          autocomplete: "off",
+          phx_debounce: "blur"
         )%>
     </div>
     <div class="flex justify-end">
-      <.button class="create-button"> Create gist</.button>
+      <.button class="create-button" phx-disable-with="Creating..."> Create gist</.button>
     </div>
   </div>
 </.form>
