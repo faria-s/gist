@@ -35,10 +35,21 @@ form input[type="text"]:focus {
 .textarea{
   @apply bg-emDark-very font-brand font-regular text-emDark-dark text-xs border border-emDark-light h-[300px] resize-none;
   border-top: none;
+  border-left: none;
 }
 
 .textarea:focus {
-  @apply focus:outline-none focus:border-emNav focus:ring-0
+  @apply focus:outline-none focus:border-emDark-light focus:ring-0
+}
+
+.line-numbers {
+  @apply border border-emDark-light font-brand font-regular text-xs text-emDark bg-emDark-very h-[300px] w-[54px] text-right overflow-hidden resize-none;
+  border-right: none;
+  border-top: none;
+}
+
+.line-numbers:focus {
+  @apply focus:outline-none focus:border-emDark-light focus:ring-0;
 }
 
 .create-button {
