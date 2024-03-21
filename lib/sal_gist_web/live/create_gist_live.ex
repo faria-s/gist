@@ -25,8 +25,9 @@ defmodule SalGistWeb.CreateGistLive do
   def handle_event("create", %{"gist" => params}, socket)do
     case Gists.create_gist(socket.assigns.current_user, params) do
       {:ok, _gist} ->
+        socket = push_event(socket, "clear-textareas", %{})
         changeset = Gists.change_gist(%Gist{})
-        {:noreply, assign(socket, :form, to_form(changeset))}
+        {:noreply, assign(socket  , :form, to_form(changeset))}
       {:error, %Ecto.Changeset{} = changeset} ->
         {:noreply, assign(socket, :form, to_form(changeset))}
     end

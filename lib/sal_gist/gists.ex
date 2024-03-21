@@ -51,7 +51,7 @@ defmodule SalGist.Gists do
   """
   def create_gist(user, attrs \\ %{}) do
     user
-    |> Ecto.build_assoc(:gists)
+    |> Ecto.build_assoc(:gist)
     |> Gist.changeset(attrs)
     |> Repo.insert()
   end
