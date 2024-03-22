@@ -6075,6 +6075,14 @@ within:
       this.el.addEventListener("input", () => {
         this.updateLineNumbers();
       });
+      this.el.addEventListener("scroll", () => {
+        const lineNumberText2 = document.querySelector("#line-numbers");
+        lineNumberText2.scrollTop = this.el.scrollTop;
+      });
+      this.handleEvent("clear-textareas", () => {
+        this.el.value = "";
+        lineNumberText.value = "1\n";
+      });
       this.el.addEventListener("keydown", (e) => {
         if (e.key == "Tab") {
           e.preventDefault();
@@ -6091,12 +6099,12 @@ within:
       this.updateLineNumbers();
     },
     updateLineNumbers() {
-      const lineNumberText = document.querySelector("#line-numbers");
-      if (!lineNumberText)
+      const lineNumberText2 = document.querySelector("#line-numbers");
+      if (!lineNumberText2)
         return;
       const lines = this.el.value.split("\n");
       const numbers = lines.map((_, index) => index + 1).join("\n") + "\n";
-      lineNumberText.value = numbers;
+      lineNumberText2.value = numbers;
     }
   };
   var liveSocket = new LiveSocket("/live", Socket, { params: { _csrf_token: csrfToken }, hooks: Hooks2 });

@@ -34,6 +34,16 @@ Hooks.UpdateLineNumbers = {
       this.updateLineNumbers()
     })
 
+    this.el.addEventListener("scroll", () => {
+      const lineNumberText = document.querySelector("#line-numbers")
+      lineNumberText.scrollTop = this.el.scrollTop
+    })
+
+    this.handleEvent("clear-textareas", () => {
+      this.el.value = ""
+      lineNumberText.value = "1\n"
+    })
+
     this.el.addEventListener("keydown",(e) =>{
       if (e.key=="Tab") {
         e.preventDefault();
