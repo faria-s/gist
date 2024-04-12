@@ -14,6 +14,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        emSyntax:"#ebf6f5",
         emNav : {
             light: "#def7ec",
             DEFAULT: "#aedbd5",
