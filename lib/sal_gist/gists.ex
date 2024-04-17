@@ -7,6 +7,7 @@ defmodule SalGist.Gists do
   alias SalGist.Repo
 
   alias SalGist.Gists.Gist
+  alias SalGist.Accounts.User
 
   @doc """
   Returns the list of gists.
@@ -86,8 +87,15 @@ defmodule SalGist.Gists do
       {:error, %Ecto.Changeset{}}
 
   """
-  def delete_gist(%Gist{} = gist) do
-    Repo.delete(gist)
+  def delete_gist(%User{} = user, gist_id) do
+    gist = Repo.get!(Gist, gist_id)
+
+    if user.id == gist.user_id do
+      Repo.delete(gist)
+      {:ok, gist}
+    else
+      {:error, :unauthorized}
+    end
   end
 
   @doc """

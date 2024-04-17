@@ -1990,6 +1990,14 @@ form input[type="text"]:focus:focus{
   border-style: solid;
 }
 
+.interactive-img-btn img:hover {
+  filter: brightness(80%);
+}
+
+.interactive-img-btn img:active{
+  transform: scale(1.1);
+}
+
 .hover\:cursor-pointer:hover{
   cursor: pointer;
 }
